@@ -29,7 +29,7 @@ def get_fruityvice_data(this_fruit_choice):
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?')
   if not fruit_choice:
-    streamlit.error('Please selet a fruit choie')
+    streamlit.error('Please select a fruit choie')
   else:
     fruityvice_normalized=get_fruityvice_data(fruit_choice)
     streamlit.dataframe(fruityvice_normalized)
@@ -61,7 +61,7 @@ if streamlit.button('Add fruit '):
    back_from_function=add_row_snowflake(fruit_choice)
    streamlit.text('Back from function')
 
-streamlist.stop()
+streamlit.stop()
   
 streamlit.write('The user entered ', fruit_choice)
 
